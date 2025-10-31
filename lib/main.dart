@@ -1,6 +1,7 @@
 import 'dart:math' as math;
-
 import 'package:flutter/material.dart';
+
+import 'custom_widgets.dart';
 
 void main() {
   final Widget widget = Directionality(
@@ -22,26 +23,9 @@ void main() {
             children: [
               FlutterLogo(style: FlutterLogoStyle.markOnly, size: 100.0),
               SizedBox(height: 30.0),
-              Text(
-                'Hellow world',
-                style: TextStyle(
-                  backgroundColor: Colors.orange.shade100,
-                  color: Colors.green.shade100,
-                  fontSize: 32.0,
-                  fontStyle: FontStyle.italic,
-                  fontWeight: FontWeight.w900,
-                  letterSpacing: 10.0,
-                ),
-              ),
+              buildHelloWorldText('message'),
               SizedBox(height: 60.0),
-              ElevatedButton(
-                onPressed: () => print('Buton apăsat!'),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.white,
-                  foregroundColor: Colors.pink.shade100,
-                ),
-                child: Text('Apăsați-mă'),
-              ),
+              buildButton('message-mă'),
             ],
           ),
         ),
